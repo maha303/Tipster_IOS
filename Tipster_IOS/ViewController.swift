@@ -50,9 +50,19 @@ class ViewController: UIViewController {
     @IBAction func digitPressed(_ sender: UIButton) {
        switch sender.titleLabel?.text {
        case "C":
+           tipSlider.value = 5
+           groupSlider.value = 1
            totalLabel.text = ""
-           evaluate()
-           break
+           groupLabel.text = "GroupSize:\(Int(groupSlider.value))"
+           tipPercentLabel.text = "5%"
+           tipLabel.text = "0.0"
+           tipTotalLabel.text = "0.0"
+           plusFiveLabel.text = "10%"
+           plusFiveTipLabel.text = "0.0"
+           plusFiveTotalLabel.text = "0.0"
+           plusTenLabel.text = "15%"
+           plusTenTipLabel.text = "0.0"
+           plusTenTotalLabel.text = "0.0"
        case "0":
            if(totalLabel.text == "0"){return}
            totalLabel.text? += "0"
